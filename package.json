@@ -9,5 +9,8 @@
     "@playwright/test": "^1.53.0",
     "@types/node": "^24.0.0"
   },
-  "scripts": {}
+  "scripts": {
+    "test": "yarn playwright test",
+    "report": "yarn playwright show-report"
+  }
 }
