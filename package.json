@@ -1,0 +1,19 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:v-rk1t/playwright.git",
+  "author": "v-rk1t <air.veerakit@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^24.0.0"
+  },
+  "scripts": {
+    "test": "yarn playwright test",
+    "report": "yarn playwright show-report"
+  },
+  "dependencies": {
+    "zod": "^3.25.61"
+  }
+}
