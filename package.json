@@ -12,5 +12,8 @@
   "scripts": {
     "test": "yarn playwright test",
     "report": "yarn playwright show-report"
+  },
+  "dependencies": {
+    "zod": "^3.25.61"
   }
 }
