@@ -2,7 +2,7 @@ import { z } from "zod/v4";
 
 export const userDetailsSchema = z.strictObject({
   id: z.number().int().positive(),
-  email: z.string().email(),
+  email: z.email(),
   first_name: z.string(),
   last_name: z.string(),
   avatar: z.url(),

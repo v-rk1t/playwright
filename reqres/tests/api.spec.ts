@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
-import { listUsersRespSchema, UserDetails } from "../../schemas/reqres";
-import { userData } from "../../data/user";
+import { listUsersRespSchema, type UserDetails } from "../schemas/reqres";
+import { userData } from "../data/user";
 
 test("Assignment 1", async ({ request }) => {
-  const response = await request.get("https://reqres.in/api/users?page=2", {
+  const response = await request.get("/api/users?page=2", {
     headers: { "x-api-key": "reqres-free-v1" },
   });
 

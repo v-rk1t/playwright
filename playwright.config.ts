@@ -1,4 +1,6 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
+import SAUCE_DEMO_CONFIG from './sauceDemo/playwright.config';
+import REQRES_CONFIG from './reqres/playwright.config';
 
 /**
  * Read environment variables from file.
@@ -34,20 +36,8 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    { ...SAUCE_DEMO_CONFIG },
+    { ...REQRES_CONFIG },
 
     /* Test against mobile viewports. */
     // {
