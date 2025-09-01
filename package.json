@@ -6,12 +6,18 @@
   "author": "v-rk1t <air.veerakit@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.53.0",
-    "@types/node": "^24.0.0"
+    "@biomejs/biome": "2.2.2",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.2"
   },
   "scripts": {
     "test": "yarn playwright test",
-    "report": "yarn playwright show-report"
+    "test:ui": "yarn playwright test --ui",
+    "report": "yarn playwright show-report",
+    "lint": "yarn exec biome lint --write",
+    "format": "yarn exec biome format --write",
+    "check": "yarn exec biome check --write"
   },
   "dependencies": {
     "zod": "^3.25.61"
